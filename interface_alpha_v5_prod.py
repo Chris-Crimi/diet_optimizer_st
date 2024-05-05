@@ -167,10 +167,10 @@ if st.button("Optimize"):
     optimization_col_titles = ["Energy (kcal)",'Protein (g)','Total Fat (g)','Carbohydrate (g)','Fiber, total dietary (g)'] + vitamin_preload.columns.tolist()[3:]
     
     #for some reason streamlit stores values as objects in data_editor so need to convert them to int searching across food code dataframe
-    food_data = food_database[food_database["Food code"].isin(st.session_state["selected_foods"]["Food Code"].astype("int"))]
+    food_data = food_database[food_database["Food code"].isin(st.session_state["selected_foods_editor"]["Food Code"].astype("int"))]
     food_data = food_data[["Food code"] + optimization_col_titles]
     food_data = food_data.set_index("Food code")
-    optimization_frame = food_data.join(st.session_state["selected_foods"].astype({'Food Code':'int32'}).set_index("Food Code"))
+    optimization_frame = food_data.join(st.session_state["selected_foods_editor"].astype({'Food Code':'int32'}).set_index("Food Code"))
     #st.write(optimization_frame.index)
     target_values = [calories, protein*your_weight, total_fat*your_weight, carbohydrate*your_weight, fiber] + vitamin_values.iloc[0].tolist()[3:] #actual values of what the optimizer is targeting, clip the front 3 because these are just gender, age,etc.
     
