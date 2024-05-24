@@ -10,4 +10,4 @@ Diet optimizer helps you design the perfect diet based on your macronutrient, mi
 My results from using the diet that I designed with it:
 Lost 11lbs in 10 weeks.
 
-![alt text][(https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)](https://github.com/Chris-Crimi/diet_optimizer_st/blob/main/Average%20Weekly%20Weigh-In.png)
+![alt text][(https://github.com/Chris-Crimi/diet_optimizer_st/blob/main/Average%20Weekly%20Weigh-In.png)]
